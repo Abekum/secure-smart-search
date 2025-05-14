@@ -11,7 +11,7 @@ body {
 .contact-content {
   position: fixed;
   z-index: 0;
-margin-top: -19%;
+margin-top: -18%;
 margin-left: 40%;
   transform: translateX(-50%);
   max-width: 100%;
@@ -23,7 +23,7 @@ margin-left: 40%;
 .text-animatec {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 1.4rem;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
