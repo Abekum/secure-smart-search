@@ -1,0 +1,76 @@
+/* /src/app/contact.css */
+
+
+body {
+  background: linear-gradient(to bottom right, #8fbabd, #f8fcfb);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Contact Section */
+.contact-content {
+  position: fixed;
+  z-index: 0;
+margin-top: -18;
+margin-left: 40%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Flex Layout for horizontal items */
+.text-animatec {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: rgb(15, 14, 11);
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Contact Links */
+.text-animatec a {
+  color: #6800f0;
+  border: 2px solid #00ff95;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hover Effect */
+.text-animatec a:hover {
+  background: #00abf0;
+  color: white;
+}
+
+/* Optional: remove horizontal <hr> lines if using flex */
+.text-animatec hr {
+  display: none;
+}
+.help {
+  color: #101111;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+margin-left: 4%;
+  justify-content: center;  
+    align-items: center;
+
+}
+
+
+.description {
+  z-index: 0;
+ 
+
+}

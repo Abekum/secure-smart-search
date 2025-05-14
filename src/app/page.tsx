@@ -3,7 +3,12 @@
 import { useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import ResultsList from '../components/ResultsList';
+import  ContactSection  from '../components/ContactSection';
 
+
+
+import './style.css';
+ 
 type DuckDuckGoItem = {
   Text: string;
   FirstURL: string;
@@ -16,12 +21,13 @@ type Result = {
 };
 
 export default function Page() {
-  const [, setSearchQuery] = useState('');
   const [results, setResults] = useState<Result[]>([]);
 
   const handleSearch = async (query: string) => {
-    console.log('Search query:', query);
-    setSearchQuery(query);
+    if (!query.trim()) {
+      setResults([]);
+      return;
+    }
 
     try {
       const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
@@ -30,20 +36,26 @@ export default function Page() {
       const formattedResults = (data as DuckDuckGoItem[]).map((item, index) => ({
         id: index,
         title: item.Text || 'No title',
-        description: item.FirstURL || 'No description available',
+        description: item.FirstURL || '',
       }));
 
       setResults(formattedResults);
     } catch (error) {
       console.error('Search failed:', error);
+      setResults([]);
     }
   };
 
   return (
-    <main className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Welcome to Secure & Smart Search</h1>
+    <main className="p-4 min-h-screen min-w-screen">
+      <h1 className="text-2xl font-bold mb-4 text-center">Secure & Smart Search</h1>
       <SearchBar onSearch={handleSearch} />
       <ResultsList results={results} />
+
+        <ContactSection />
+       
     </main>
   );
+
+
 }
