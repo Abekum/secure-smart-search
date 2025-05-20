@@ -13,7 +13,7 @@ function DescriptionSection() {
               knowing that your data stays safe.
 <br />
 <br />
-<br />
+<p style={{ textAlign: "center", fontStyle: "italic", fontSize: "14px" }}>Developed by: Abebe Kumbi Bedada</p>
 </p>
          <hr className="border-t border-black" />
       </div>
